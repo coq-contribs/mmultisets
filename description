@@ -1,0 +1,12 @@
+Name: MMultisets
+Title: MMultisets
+Description: This library provides computational multisets, in the style of MSets/MMaps, based on maps (MMap).
+It was designed to have an extensive number of lemmas covering the operations provided in the interface and their interactions.
+
+Keywords: finite multisets
+Category: Computer Science/Data Types and Data Structures
+Author: Lionel Rieg
+Email: lionel.rieg@college-de-france.fr
+Institution: College de France
+Require: 
+License: BSD

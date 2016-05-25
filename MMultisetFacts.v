@@ -2375,8 +2375,8 @@ Module Make(E : DecidableType)(M : MMultisetsOn E).
       + intros [] [] []. compute in *. auto.
       + now apply elements_from_elements.
     * destruct Hl as [Hnodup Hpos]. induction l as [| [x n] l]; try (split; assumption).
-      inversion_clear Hnodup. inversion_clear Hpos. destruct (IHl $(assumption)$  $(assumption)$) as [Hnodup Hpos].
-    (* BUG?: why does _ not do the job here? (rather than $(assumption)$) *)
+      inversion_clear Hnodup. inversion_clear Hpos.
+      destruct IHl as [Hnodup Hpos]. assumption. assumption.
       split; simpl.
       + destruct (f x n); trivial. constructor; trivial. intro Hin. apply H.
         apply InA_elt_pair in Hin. destruct Hin as [n' Hin]. simpl in *. rewrite filter_InA in Hin.
